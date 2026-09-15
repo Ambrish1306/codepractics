@@ -1,0 +1,50 @@
+[]              list=> order matters, duplicated allowed , mutable,
+{1, 2, 3}        set=>unorder doesn't matter, duplicated not allowed,mutable
+{"key": "value"} dictionary
+("abc","def",29) tuple Immutability
+
+set and list are mutable,
+Use case of List, set , tuple: 
+List : 
+    - Order matters. 
+    - duplicates are allowed.
+    - data can be changed (mutable).
+Set:
+    - Order does not matter.
+    - duplicates are not allowed.
+    - data can be changed (mutable).
+    - for fast lookup and membership testing.
+Tuple:
+    - Order matters.
+    - duplicates are allowed.
+    - data cannot be changed (immutable).
+
+========
+args and kwargs
+args and kwargs are used in function definitions to allow for variable numbers of arguments to be passed to a function.
+*args allows a function to accept any number of positional arguments, which are passed as a tuple
+**kwargs allows a function to accept any number of keyword arguments, which are passed as a dictionary. 
+==============
+generators are function that return an interator that yields(pause and resume) a sequence of values using the yield statement.
+
+unlike a normal function that returns. it uses yeild keyword. 
+===========
+List conperhensions construct the entire list in memory immediately. 
+
+Generator expressions use parnetheses "()" and evaludate lazily, yielding items one by one for better memory efficiency.
+
+========================
+mutable ==> list ,disctionary, set
+immutable ==> tuple, string, int, float, bool
+
+========================
+
+Decorator :- Think of a decorator as a wrapper around a function:
+
+========================
+__init__,__len__,__str__,__repr__,__call__,__getitem__,__setitem__,__delitem__,__iter__,__next__,__contains__,__eq__,__ne__,__lt__,__le__,__gt__,__ge__
+they allow user-defined classes to intract with built-in Python functions and syntax. 
+
+
+
+

@@ -1,0 +1,38 @@
+OpenAI-compatible endpoints
+Add your key as  to your .env
+ANTHROPIC_BASE_URL = "https://api.anthropic.com/v1/"
+DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+GROK_BASE_URL = "https://api.x.ai/v1"
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OLLAMA_BASE_URL = "http://localhost:11434/v1"
+
+## CrewAI setup
+https://docs.crewai.com/concepts/llms
+https://docs.crewai.com/how-to/llm-connections
+
+
+##LangGraph setup
+https://python.langchain.com/docs/integrations/chat/ollama/#installation
+uv add langchain-ollama
+
+LangGraph with other models
+https://python.langchain.com/docs/integrations/chat/
+
+NOTE : 
+I am running model locally using ollama run lama3.2(machine is big you can try llama3.2:1b) 
+to check wheather model is running URL:http://localhost:11434/
+Every call to an LLM is stateless
+We pass in the entire conversation so far in the input prompt, every time
+This gives the illusion that the LLM has memory - it apparently keeps the context of the conversation
+
+Point : 
+An LLM just predicts the most likely next tokens in the sequence; if that sequence contains "My name is Ed" and later "What's my name?" then it will predict.. Ed!
+Correct, base Large Language Models (LLMs) are completely stateless. They do not retain any information
+
+The ChatGPT product uses exactly this trick - every time you send a message, it's the entire conversation that gets passed in.
+
+"Does that mean we have to pay extra each time for all the conversation so far"
+
+For sure it does. And that's what we WANT. We want the LLM to predict the next tokens in the sequence, looking back on the entire conversation. We want that compute to happen, so we need to pay the electricity bill for it!
