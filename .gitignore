@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+
+# VS Code workspace settings
+.vscode/
+
+# Python generated files and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+.env
+
+# C/C++ build output
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+build/
+cmake-build-*/
+
+# Java compiled output and build directories
+*.class
+target/
+out/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
